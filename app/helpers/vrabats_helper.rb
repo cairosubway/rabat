@@ -1,0 +1,2 @@
+module VrabatsHelper
+end

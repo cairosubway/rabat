@@ -1,0 +1,2 @@
+module RrabatsHelper
+end

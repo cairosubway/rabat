@@ -1,0 +1,17 @@
+<%= form_for(@vrabat) do |f| %>
+  <% if @vrabat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vrabat.errors.count, "error") %> prohibited this vrabat from being saved:</h2>
+
+      <ul>
+      <% @vrabat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

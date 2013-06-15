@@ -1,0 +1,83 @@
+class VolsController < ApplicationController
+  # GET /vols
+  # GET /vols.json
+  def index
+    @vols = Vol.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @vols }
+    end
+  end
+
+  # GET /vols/1
+  # GET /vols/1.json
+  def show
+    @vol = Vol.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @vol }
+    end
+  end
+
+  # GET /vols/new
+  # GET /vols/new.json
+  def new
+    @vol = Vol.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @vol }
+    end
+  end
+
+  # GET /vols/1/edit
+  def edit
+    @vol = Vol.find(params[:id])
+  end
+
+  # POST /vols
+  # POST /vols.json
+  def create
+    @vol = Vol.new(params[:vol])
+
+    respond_to do |format|
+      if @vol.save
+        format.html { redirect_to @vol, notice: 'Vol was successfully created.' }
+        format.json { render json: @vol, status: :created, location: @vol }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @vol.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /vols/1
+  # PUT /vols/1.json
+  def update
+    @vol = Vol.find(params[:id])
+
+    respond_to do |format|
+      if @vol.update_attributes(params[:vol])
+        format.html { redirect_to @vol, notice: 'Vol was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @vol.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /vols/1
+  # DELETE /vols/1.json
+  def destroy
+    @vol = Vol.find(params[:id])
+    @vol.destroy
+
+    respond_to do |format|
+      format.html { redirect_to vols_url }
+      format.json { head :no_content }
+    end
+  end
+end
