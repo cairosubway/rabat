@@ -2,5 +2,5 @@ $('.grid_9').empty();
 $('.grid_9').append($('<div id="vol"></div>'));
 $('#vol').html("<%= escape_javascript(render(@vrabats)) %>");
 
-Galleria.loadTheme('assets/galleria.classic.min.js');
+Galleria.loadTheme("<%= javascript_path('galleria.classic.min.js') %>");
 Galleria.run('#vol');

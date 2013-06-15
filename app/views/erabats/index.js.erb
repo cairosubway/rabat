@@ -2,5 +2,5 @@ $('.grid_9').empty();
 $('.grid_9').append($('<div id="ess"></div>'));
 $('#ess').html("<%= escape_javascript(render(@erabats)) %>");
 
-Galleria.loadTheme('assets/galleria.classic.min.js');
+Galleria.loadTheme("<%= javascript_path('galleria.classic.min.js') %>");
 Galleria.run('#ess');
