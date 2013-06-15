@@ -1,6 +1,6 @@
 $('.grid_9').empty();
-$('.grid_9').append($('<div id="rabat"></div>'));
-$('#rabat').html("<%= escape_javascript(render(@vrabats)) %>");
+$('.grid_9').append($('<div id="vol"></div>'));
+$('#vol').html("<%= escape_javascript(render(@vrabats)) %>");
 
 Galleria.loadTheme('assets/galleria.classic.min.js');
-Galleria.run('#rabat');
+Galleria.run('#vol');

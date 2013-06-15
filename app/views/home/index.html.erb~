@@ -9,11 +9,10 @@
 					<h2>Photos from Morocco</h2>
 				</div>
 				<div class="grid_2">
-				<%= link_to rrabats_path, :'data-remote' => true do %>
-				<%= image_tag '/assets/rab.jpg' %>				
-				<% end %>
+					<%= link_to rrabats_path, :'data-remote' => true do %>
+					<%= image_tag '/assets/rab.jpg' %>				
+					<% end %>
 				</div>
-									
 				<div class="grid_2">
 					<%= link_to rrabats_path, :'data-remote' => true do %>
 					<p>Rabat</p>
